@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <section class="hero is-danger   is-bold"> <!--<section class="hero is-primary is-bold"> para color verde-->
+      
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Prevalencia <img src="vitapro_2.png" alt="Logo" style="float: right; width: 180px; height: auto;"></h1>
+        </div>
+      </div>
+    </section>
+    <form id="form" class="container m-5 pl-4" method="POST">
+
+           <!--Tipo fecha con formato dd/mm/yyyy-->
+           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.es.min.js"></script>
+           
+           <style>
+            .datepicker-dropdown {
+              background-color: #fff;
+            }
+            .datepicker td, .datepicker th {
+              font-size: 12px;
+            }
+          </style>
+           <div class="field">
+             <label class="label">Fecha</label>
+             <div class="control">
+               <input
+                 class="input"
+                 type="text"
+                 placeholder="yyyy-mm-dd"
+                 name="fecha_pre"
+                 id="date"
+                 style="max-width: 210px;"
+               />
+             </div>
+           </div>
+           
+           <script>
+             $(document).ready(function(){
+               $('#date').datepicker({
+                 format: "yyyy-mm-dd",
+                 language: "es",
+                 autoclose: true,
+                 todayHighlight: true
+               });
+             });
+           </script>
+           
+         
+
+      <!--Fila 1-->
+      <!--Tipo desplegable-->
+      <div class="columns">
+
+        <div class="column">
+          <div class="field">
+            <label class="label">Responsable</label>
+            <div class="control">
+              <div class="select">
+                <select name="responsable_pre" required>
+                  <option value="" disabled selected hidden>Selecciona una opción</option>
+                  <option value="test">Test</option>
+                  <option value="APB-Bio">APB-Bio</option>
+                  <option value="AT Vitapro">AT Vitapro</option>
+                  <option value="FT Vitapro">FT Vitapro</option>
+                  <option value="mandasacorp">mandasacorp</option>
+                  <option value="culcamar">culcamar</option>
+                  <option value="fonseca">fonseca</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="field">
+            <label class="label">Cliente</label>
+            <div class="control">
+              <div class="select">
+                <select name="cliente_pre" required>
+                  <option value="" disabled selected hidden>Selecciona una opción</option>
+                  <option value="ipsp">IPSP</option>
+                  <option value="vinicio aguirre">Vinicio Aguirre</option>
+                  <option value="marinasol">Marinasol</option>
+                  <option value="mandasacorp">mandasacorp</option>
+                  <option value="culcamar">culcamar</option>
+                  <option value="fonseca">fonseca</option>
+                  <option value="langostinera tumbes">langostinera tumbes</option>
+                  <option value="icasur">icasur</option>
+                  <option value="acuarios marinos">Acuarios Marinos</option>
+                  <option value="gms">GMS</option>
+                  <option value="promarisco">Promarisco</option>
+                  <option value="grlitoral">grlitoral</option>
+                  <option value="omarsa">Omarsa</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="field">
+            <label class="label">Camaronera</label>
+            <div class="control">
+              <div class="select">
+                <select name="camaronera_pre"style="max-width: 210px;"required>
+                  <option value="" disabled selected hidden>Selecciona una opción</option>
+                  <option value="afrika">Afrika</option>
+                  <option value="bajen">Bajen</option>
+                  <option value="chanduy">Chanduy</option>
+                  <option value="california">California</option>
+                  <option value="cachugran">Cachugran</option>
+                  <option value="puna">Puna</option>
+                  <option value="chongon">Chongon</option>
+                  <option value="puerto inca">Puerto Inca</option>
+                  <option value="marfrisco">Marfrisco</option>
+                  <option value="v.aguirre	israel">V.Aguirre	Israel</option>
+                  <option value="acuarios marinos">Acuarios Marinos</option>
+                  <option value="culcamar">Culcamar</option>
+                  <option value="gms">GMS</option>
+                  <option value="grlitoral">GrLitoral</option>
+                  <option value="grrivera	Rivermar">GrRivera	Rivermar</option>
+                  <option value="icasur">Icasur</option>
+                  
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="column">
+          <div class="field">
+            <label class="label">Sector</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="Sector"
+                name="sector_pre"
+                style="max-width: 210px;"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="field">
+            <label class="label">Piscina</label>
+            <div class="control">
+              <input
+                class="input"
+                type="text"
+                placeholder="Piscina"
+                name="piscina_pre"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr style="margin-top: 20px; margin-bottom: 20px;">
+      <p class="subtitle is-4 has-text-weight-bold has-text-blue" style="border-top: 1px solid #000; padding-top: 8px;"></p>
+      <p class="subtitle is-6 has-text-black"></p>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Animales Total</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input 
+                class="input" 
+                type="number" 
+                id="totalAnimales" 
+                min="0" 
+                name="animales_total" 
+                style="max-width: 200px;
+                "placeholder="Total de animales" 
+                oninput="calcularPorcentaje()"
+                />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Animales Enfermos</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="number" id="animalesEnfermos" min="0" name="animales_enfermos" style="max-width: 200px;"placeholder="Número de animales enfermos" oninput="calcularPorcentaje()">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Animales Muertos</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input" type="number" id="animalesMuertos" 
+              name="animales_muertos" min="0" style="max-width: 200px;"placeholder="Número de animales muertos" 
+              oninput="calcularPorcentaje()">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <!-- Vacío para mantener el diseño -->
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <label class="label">Porcentaje de Animales Enfermos</label>
+            <div class="control">
+              <input class="input" type="text" id="porcentajeEnfermos" 
+              name="porcentaje_enfermos" disabled>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Porcentaje de Animales Muertos</label>
+            <div class="control">
+              <input class="input" type="text" id="porcentajeMuertos" 
+              name="porcentaje_muertos" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Función para calcular el porcentaje de animales enfermos y muertos
+    function calcularPorcentaje() {
+      // Obtener el valor del total de animales, animales enfermos y animales muertos
+      var totalAnimales = parseFloat(document.getElementById("totalAnimales").value);
+      var animalesEnfermos = parseFloat(document.getElementById("animalesEnfermos").value);
+      var animalesMuertos = parseFloat(document.getElementById("animalesMuertos").value);
+
+      // Calcular el porcentaje de animales enfermos y muertos
+      var porcentajeEnfermos = (animalesEnfermos / totalAnimales) * 100;
+      var porcentajeMuertos = (animalesMuertos / totalAnimales) * 100;
+
+      // Mostrar el porcentaje en los campos de texto
+      document.getElementById("porcentajeEnfermos").value = isNaN(porcentajeEnfermos) ? '' : porcentajeEnfermos.toFixed(2) + "%";
+      document.getElementById("porcentajeMuertos").value = isNaN(porcentajeMuertos) ? '' : porcentajeMuertos.toFixed(2) + "%";
+    }
+  </script>
+</body>
+</html>
+
+<hr style="margin-top: 20px; margin-bottom: 20px;">
+<p class="subtitle is-4 has-text-weight-bold has-text-blue" style="border-top: 1px solid #000; padding-top: 8px;"></p>
+
+<div class="field">
+  <label class="label">Fiabilidad</label>
+  <div class="control">
+    <label class="checkbox">
+      <input type="checkbox" name="Agree To Terms" value="yes" /> Confirmo la fiabilidad de la información proporcionada 
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Información adicional</label>
+  <div class="control">
+    <textarea
+      class="textarea"
+      placeholder="Comentario"
+      name="comentario_pre"
+    ></textarea>
+  </div>
+</div>
+
+<!--adjuntando pdf-->
+
+
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-primary" type="submit" id="submit-button">
+      Guardar
+    </button>
+  </div>
+  <div class="control">
+    <button class="button is-danger">Cancelar</button>
+  </div>
+</div>
+</form>
+<div
+id="message"
+style="
+  display: none;
+  margin: 20px;
+  font-weight: bold;
+  color: rgb(7, 17, 111);
+  padding: 8px;
+  background-color: rgb(83, 241, 31);
+  border-radius: 4px;
+  border-color: rgb(11, 61, 132);
+"
+></div>
+
+<script>
+document.getElementById("form").addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent the default form submission
+  document.getElementById("message").textContent = "Submitting..";
+  document.getElementById("message").style.display = "block";
+  document.getElementById("submit-button").disabled = true;
+
+  // Collect the form data
+  var formData = new FormData(this);
+  var keyValuePairs = [];
+  for (var pair of formData.entries()) {
+    keyValuePairs.push(pair[0] + "=" + pair[1]);
+  }
+
+  var formDataString = keyValuePairs.join("&");
+
+  // Send a POST request to your Google Apps Script
+  fetch(
+    "https://script.google.com/macros/s/AKfycbxjWj-4y9HQ1RAebKaGiKL3EN-xWL81pNLl8Gis46h8a1FA-9CbOFLxF2TZWOFnswzL/exec",
+     //"https://script.google.com/macros/s/AKfycbziICwhCQMLOR_68pU0YeLb75vLWan64poPfVuJI0WTrYw6gUn2LCAQZecLwlu-HzqP/exec",
+    //https://script.google.com/macros/s/AKfycbziICwhCQMLOR_68pU0YeLb75vLWan64poPfVuJI0WTrYw6gUn2LCAQZecLwlu-HzqP/exec
+    //https://script.google.com/macros/s/AKfycbziICwhCQMLOR_68pU0YeLb75vLWan64poPfVuJI0WTrYw6gUn2LCAQZecLwlu-HzqP/exec
+    {
+      redirect: "follow",
+      method: "POST",
+      body: formDataString,
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
+    }
+  )
+    .then(function (response) {
+      // Check if the request was successful
+      if (response) {
+        return response; // Assuming your script returns JSON response
+      } else {
+        throw new Error("Failed to submit the form.");
+      }
+    })
+    .then(function (data) {
+      // Display a success message
+      document.getElementById("message").textContent =
+        "Data submitted successfully!";
+      document.getElementById("message").style.display = "block";
+      document.getElementById("message").style.backgroundColor = "green";
+      document.getElementById("message").style.color = "beige";
+      document.getElementById("submit-button").disabled = false;
+      document.getElementById("form").reset();
+
+      setTimeout(function () {
+        document.getElementById("message").textContent = "";
+        document.getElementById("message").style.display = "none";
+      }, 2600);
+    })
+    .catch(function (error) {
+      // Handle errors, you can display an error message here
+      console.error(error);
+      document.getElementById("message").textContent =
+        "An error occurred while submitting the form.";
+      document.getElementById("message").style.display = "block";
+    });
+});
+</script>
+</body>
+</html>
